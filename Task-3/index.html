@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Mentor-Dashboard</title>
+       <link rel="icon" href="img/Dashboard-icon.jpeg">
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- ================= DASHBOARD VIEW ================= -->
+        <div id="view-dashboard" class="spa-view active">
+            <header id="head">
+                <h1> Student Management System</h1>
+                <p> "A person who never made a mistake never tried anything new."  Albert Einstein</p>
+            </header>
+            <div id="card1" >
+            <h2 >Total-Students</h2>
+                <p id="no-of-students">0</p>
+            </div>
+            <div id="card2" >
+            <h2 >Average-Mark</h2>
+                <p id="Avg-mark">0</p>
+            </div>
+            <div id="card3" >
+            <h2>Highest-Mark</h2>
+                <p id="high-mark">0</p>
+            </div>
+            <div id="card4" >
+            <h2 >Lowest-Mark</h2>
+                <p id="low-mark">0</p>
+            </div>
+                
+            <section>
+                <a href="#add-student">
+                   <button type="button">Add-Student</button>
+                </a>
+                <a href="#student-list">
+                    <button type="button">Student-List</button> 
+                </a>
+            </section>
+        </div>
+
+        <!-- ================= ADD STUDENT VIEW ================= -->
+        <div id="view-add-student" class="spa-view">
+            <header>
+                <h1>Add Student Details Below</h1>
+            </header>
+        
+            <form id="submit">
+                <table>
+                    <tr>
+                         <td> Student Name:</td><td> <input type="text" placeholder="Enter Student name" id="sname"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td> <td><input type="email" placeholder="Enter your Email" id="smail"></td>
+                    </tr>
+                    <tr>
+                        <td>Age:</td> <td><input type="number" placeholder="Enter Your Age" id="sage"> </td>
+                    </tr>
+                     <tr>
+                         <td> Department:</td><td> <input type="text" placeholder="Enter Department Name" id="sdept"></td>
+                    </tr>
+                    <tr> <td colspan="2" class="marks-heading">
+                        Enter Subject Marks
+                    </td></tr>
+                     <tr>
+                        <td>Tamil:</td> <td><input type="number" placeholder="Enter Your mark" id="stm"  > </td>
+                    </tr>
+                     <tr>
+                        <td>English:</td> <td><input type="number" placeholder="Enter Your mark" id="sem" > </td>
+                    </tr>
+                     <tr>
+                        <td>Maths:</td> <td><input type="number" placeholder="Enter Your mark" id="smm" > </td>
+                    </tr>
+                     <tr>
+                        <td>Science:</td> <td><input type="number" placeholder="Enter Your mark" id="ssm" > </td>
+                    </tr>
+                     <tr>
+                        <td>Social:</td> <td><input type="number" placeholder="Enter Your mark" id="som" > </td>
+                    </tr>
+                    <tr>
+                       <td colspan="2"> <button type="submit">Add-Student-Details</button></td>
+                    </tr>
+                     
+                </table>
+            </form>
+            <a href="#dashboard">
+                <button type="button">BACK TO HOME</button>
+            </a>
+        </div>
+
+        <!-- ================= STUDENT LIST VIEW ================= -->
+        <div id="view-student-list" class="spa-view">
+            <form  id="search-form"> 
+                <input type="text" id="search-input" placeholder="search students by name mail department">
+                <button type="reset">clear</button>
+            </form>
+            <header>
+                <h1>Available Student List</h1> 
+            </header>
+            <div id="box">
+            </div>
+            <a href="#dashboard">
+                <button type="button">BACK TO HOME</button>
+            </a>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
